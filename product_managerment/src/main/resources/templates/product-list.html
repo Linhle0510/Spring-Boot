@@ -67,7 +67,7 @@
                                 <a th:href="@{'/page/' + ${currentPage} + '?sortField=brand&sortDir=' + ${reverseSortDir}}">Brand</a>
                             </th>
                             <th>
-                                <a th:href="@{'/page/' + ${currentPage} + '?sortField=madein&sortDir=' + ${reverseSortDir}}">Made In</a>
+                                <a th:href="@{'/page/' + ${currentPage} + '?sortField=madeIn&sortDir=' + ${reverseSortDir}}">Made In</a>
                             </th>
                             <th>
                                 <a th:href="@{'/page/' + ${currentPage} + '?sortField=price&sortDir=' + ${reverseSortDir}}">Price</a>
@@ -98,7 +98,7 @@
                 </div>
                 <div th:if="${totalPages > 1}">
                     Total Items: [[${totalItems}]]
-                    &nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;Page [[${currentPage}]] of [[${totalPages}]] &nbsp;&nbsp;&nbsp;
                     
                     <a th:if="${currentPage > 1}" th:href="@{'/page/1' + '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">First</a>
                     <span th:unless="${currentPage > 1}">First</span>
