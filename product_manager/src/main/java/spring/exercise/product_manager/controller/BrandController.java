@@ -59,53 +59,5 @@ public class BrandController {
         brandRepo.delete(brand);
         return "redirect:/brand";
     }
-    /*
-     * @Autowired
-     * 
-     * private BrandService brandService;
-     * 
-     * @Autowired private CategoryService categoryService;
-     * 
-     * @RequestMapping("/brand") public String getAllBrands(Model model){
-     * List<Brand> listBrands = brandService.getAllBrand();
-     * 
-     * model.addAttribute("listBrands",listBrands);
-     * 
-     * return "list-brand";
-     * 
-     * }
-     * 
-     * @RequestMapping(path = { "/brand/edit", "brand/edit/{id}" }) public String
-     * editBrandById(Model model, @PathVariable("id") Optional<Long> id) throws
-     * RecordNotFoundException { List<Category> listCategories =
-     * categoryService.getAllCategory(); if (id.isPresent()) { Brand brand =
-     * brandService.getBrandById(id.get()); model.addAttribute("brand", brand);
-     * model.addAttribute("listCategories", listCategories);
-     * 
-     * } else {
-     * 
-     * model.addAttribute("brand", new Brand());
-     * model.addAttribute("listCategories", listCategories); }
-     * 
-     * return "brand-form"; }
-     * 
-     * @RequestMapping(path = "/brand/delete/{id}") public String
-     * deleteCategoryById(Model model, @PathVariable("id") Long id) throws
-     * RecordNotFoundException {
-     * 
-     * brandService.deleteBrandById(id); return "redirect:/brand"; }
-     * 
-     * @RequestMapping(path = "/createBrand", method = { RequestMethod.GET,
-     * RequestMethod.POST }) public String createOrUpdateBrand(Brand brand) {
-     * 
-     * brandService.createOrUpdateBrand(brand);
-     * 
-     * return "redirect:/brand"; }
-     * 
-     * /* @GetMapping("/createBrand") private String createBrand(Model model){
-     * List<Category> listCategories = categoryRepo.findAll();
-     * model.addAttribute("brand", new Brand());
-     * model.addAttribute("listCategories", listCategories); return "brand-form"; }
-     */
 
 }
